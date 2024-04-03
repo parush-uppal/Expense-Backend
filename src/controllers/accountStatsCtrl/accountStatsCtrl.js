@@ -17,7 +17,6 @@ const accountStatsCtrl = expressAsyncHandler(async (req, res) => {
       },
     },
   ]);
-
   const incomeStats = await Income.aggregate([
     //filter
     { $match: { amount: { $gte: 20 } } },
